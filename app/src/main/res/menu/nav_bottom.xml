@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/berandaFragment"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Beranda" />
+
+    <item
+        android:id="@+id/noteFragment"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="Siswa" />
+
+</menu>
