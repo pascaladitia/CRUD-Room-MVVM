@@ -28,7 +28,6 @@ class MainFragment : Fragment() {
     private lateinit var navController: NavController
     private lateinit var viewModel: ViewModelUser
     private lateinit var sharePref: SharedPreferences
-    private var user: User? = null
     var getName: String? = null
 
     companion object {
@@ -49,6 +48,7 @@ class MainFragment : Fragment() {
         getName = arguments?.getString("name")
 
         viewModel = ViewModelProviders.of(this).get(ViewModelUser::class.java)
+        viewModel.showUserView()
 
         sharePref = requireActivity().getSharedPreferences(NAME, Context.MODE_PRIVATE)
     }
@@ -56,7 +56,6 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        viewModel.showUserView()
 
         attachBtn()
 
